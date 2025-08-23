@@ -1,0 +1,70 @@
+# ===================================================================
+# .gitignore for C++/CMake/PCL/VSCode projects
+# ===================================================================
+
+# 1. Thư mục build và các file của CMake/Build System
+# -------------------------------------------------------------------
+# Đây là phần quan trọng nhất. Thư mục build chứa tất cả các file
+# được tạo ra trong quá trình biên dịch.
+/build/
+/build-*/
+/out/
+/bin/
+
+# Các file tạm của CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+CMakeLists.txt.user
+
+# Các file của Visual Studio (nếu mở bằng VS)
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+
+# 2. Các file cấu hình Editor và hệ điều hành
+# -------------------------------------------------------------------
+# Bỏ qua các file cấu hình riêng của VS Code và thư mục .vs
+# QUAN TRỌNG: Bỏ qua settings.json vì nó chứa đường dẫn vcpkg của bạn
+# NHƯNG giữ lại launch.json và tasks.json vì chúng hữu ích cho người khác
+/.vscode/settings.json
+/.vscode/c_cpp_properties.json
+/.vs/
+
+# Files hệ điều hành
+.DS_Store
+Thumbs.db
+
+# 3. File thực thi, thư viện và file tạm của trình biên dịch
+# -------------------------------------------------------------------
+# File thực thi
+*.exe
+*.dll
+*.so
+*.dylib
+*.a
+*.lib
+
+# File tạm của trình biên dịch MSVC
+*.obj
+*.pdb
+*.ilk
+*.pch
+
+# 4. Dữ liệu lớn và các file được tạo ra
+# -------------------------------------------------------------------
+# Bỏ qua các file point cloud đã được chuyển đổi
+*.pcd
+
+# Bỏ qua các file log có thể được tạo ra
+*.log
+
+# BỎ QUA CÁC FILE DỮ LIỆU RẤT LỚN. Git không được thiết kế để
+# lưu trữ các file lớn. Hãy chỉ giữ lại các file mẫu nhỏ.
+# Ví dụ: bỏ qua file 25 triệu điểm nhưng giữ lại file test nhỏ
+# point_cloud_25m.txt
+# another_large_file.txt
+
+*.txt
+
